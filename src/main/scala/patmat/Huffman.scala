@@ -23,9 +23,6 @@ object Huffman {
     case class Leaf(char: Char, weight: Int) extends CodeTree
 
 
-
-
-
     // Part 1: Basics
 
     def weight(tree: CodeTree): Int = tree match {
@@ -41,9 +38,6 @@ object Huffman {
     }
 
     def makeCodeTree(left: CodeTree, right: CodeTree) = Fork(left, right, chars(left) ::: chars(right), weight(left) + weight(right))
-
-
-
 
 
     // Part 2: Generating Huffman trees
@@ -191,9 +185,6 @@ object Huffman {
     }
 
 
-
-
-
     // Part 3: Decoding
 
     type Bit = Int
@@ -232,9 +223,6 @@ object Huffman {
     def decodedSecret: List[Char] = decode(frenchCode, secret)
 
 
-
-
-
     // Part 4a: Encoding using Huffman tree
 
     /**
@@ -252,9 +240,6 @@ object Huffman {
         case Fork(l, r, _, _) => if (chars(l).contains(char)) 0 :: encode(char, l) else 1 :: encode(char, r)
         case Leaf(_, _) => Nil
     }
-
-
-
 
 
     // Part 4b: Encoding using code table

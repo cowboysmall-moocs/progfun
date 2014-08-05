@@ -1,4 +1,5 @@
 import forcomp.Anagrams._
+
 object AnagramsWS {
 
     def sentenceAnagrams(sentence: Sentence): List[Sentence] = {

@@ -180,7 +180,7 @@ class FunSetSuite extends FunSuite {
         val s_1 = map(x => x >= 0 && x <= 10, x => x + 2)
         val s_2 = map(x => x >= -bound && x <= bound, x => x + bound)
 
-        val s = map(x => x == 0 || x == 2 || x ==4 || x == 6 || x == 999, x => x + 1)
+        val s = map(x => x == 0 || x == 2 || x == 4 || x == 6 || x == 999, x => x + 1)
 
         assert(forall(s_1, x => x >= 2 && x <= 12))
         assert(forall(s_2, x => x >= 0 && x <= 2 * bound))
