@@ -157,7 +157,7 @@ object Anagrams {
                     o <- combinations(occurrences)
                     w <- dictionaryByOccurrences(o)
                     s <- anagrams(subtract(occurrences, wordOccurrences(w)))
-                    if !o.isEmpty
+                    if o.nonEmpty
                 } yield w :: s
         }
         anagrams(sentenceOccurrences(sentence))
