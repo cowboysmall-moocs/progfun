@@ -1,4 +1,6 @@
-**/.DS_STORE
-**/.idea
-**/project
-**/target
+.DS_STORE
+
+.idea
+
+project
+target
